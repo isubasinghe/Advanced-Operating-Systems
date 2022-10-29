@@ -1,0 +1,68 @@
+
+\documentclass[10pt]{beamer}
+
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{appendixnumberbeamer}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\usepackage[edges]{forest}
+\usetikzlibrary{shapes.geometric,arrows.meta}
+\usepackage{xspace}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+\title{Advanced Operating Systems}
+\subtitle{An exploration of alternative OS designs}
+\date{\today}
+\author{Isitha Subasinghe}
+\institute{University of Melbourne}
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Table of contents}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+\section[Introduction]{Introduction}
+
+\begin{frame}[fragile]{Introduction}
+
+\textbf{What is an Operating System?}
+
+Differential Dataflow is a generalisation of Incremental Computation. It allows for \textcolor{blue}{incrementally} updating the results of \textcolor{blue}{structured computations} over \textcolor{blue}{multisets}.
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Background}
+  Related Work
+  \begin{itemize}
+    \item{Mach}
+    \item{L3}
+    \item{L4}
+    \item{sel4}
+    \item{Barrelfish}
+  \end{itemize}
+\end{frame}
+
+\input{allocators.tex}
+\input{virtual_memory.tex}
+\input{permissions.tex}
+
+
+\begin{frame}[allowframebreaks]{References}
+
+  \bibliography{demo}
+  \bibliographystyle{abbrv}
+
+\end{frame}
+
+\end{document}
